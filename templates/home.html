@@ -1,11 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Your Tasks</h2>
-<ul>
-    {% for task in tasks %}
-    <li>{{ task.title }} - {{ task.description }}</li>
-    {% endfor %}
-</ul>
-<a href="{{ url_for('main.add_task') }}">Add New Task</a>
+<section class="home-section">
+    <h2>Welcome to Things to Finish</h2>
+    <p>Your simple, efficient tool for managing tasks and boosting productivity. <br> Navigate through the menu to view pending tasks, completed tasks, or add a new task to your list.</p>
+</section>
 {% endblock %}

@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Things to Finish</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
     <header>
         <h1>Things to Finish</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('main.home') }}" class="{% if request.endpoint == 'main.home' %}active{% endif %}">Home</a></li>
+                <li><a href="{{ url_for('main.pending_tasks') }}" class="{% if request.endpoint == 'main.pending_tasks' %}active{% endif %}">Pending Tasks</a></li>
+                <li><a href="{{ url_for('main.completed_tasks') }}" class="{% if request.endpoint == 'main.completed_tasks' %}active{% endif %}">Completed Tasks</a></li>
+                <li><a href="{{ url_for('main.add_task') }}" class="{% if request.endpoint == 'main.add_task' %}active{% endif %}">Add Task</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         {% block content %}{% endblock %}
     </main>
-    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <footer>
+        <p>&copy; 2024 Things to Finish. All rights reserved.</p>
+    </footer>
 </body>
 </html>

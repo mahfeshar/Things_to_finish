@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="tasks-section">
+    <h2>Completed Tasks</h2>
+    <div class="tasks-container">
+        {% for task in tasks %}
+        <div class="task-card completed-task">
+            <input type="checkbox" checked onclick="location.href='{{ url_for('main.complete_task', task_id=task.id) }}';">
+            <div class="task-details">
+                <h3>{{ task.title }}</h3>
+                <p>{{ task.description }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
