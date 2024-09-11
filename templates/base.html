@@ -12,10 +12,20 @@
         <h1>Things to Finish</h1>
         <nav>
             <ul>
+                <!-- Links that are visible to all users -->
                 <li><a href="{{ url_for('main.home') }}" class="{% if request.endpoint == 'main.home' %}active{% endif %}">Home</a></li>
-                <li><a href="{{ url_for('main.pending_tasks') }}" class="{% if request.endpoint == 'main.pending_tasks' %}active{% endif %}">Pending Tasks</a></li>
-                <li><a href="{{ url_for('main.completed_tasks') }}" class="{% if request.endpoint == 'main.completed_tasks' %}active{% endif %}">Completed Tasks</a></li>
-                <li><a href="{{ url_for('main.add_task') }}" class="{% if request.endpoint == 'main.add_task' %}active{% endif %}">Add Task</a></li>
+
+                {% if current_user.is_authenticated %}
+                    <!-- Links for authenticated (logged-in) users only -->
+                    <li><a href="{{ url_for('main.pending_tasks') }}" class="{% if request.endpoint == 'main.pending_tasks' %}active{% endif %}">Pending Tasks</a></li>
+                    <li><a href="{{ url_for('main.completed_tasks') }}" class="{% if request.endpoint == 'main.completed_tasks' %}active{% endif %}">Completed Tasks</a></li>
+                    <li><a href="{{ url_for('main.add_task') }}" class="{% if request.endpoint == 'main.add_task' %}active{% endif %}">Add Task</a></li>
+                    <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+                {% else %}
+                    <!-- Links for unauthenticated (guest) users only -->
+                    <li><a href="{{ url_for('auth.login') }}" class="{% if request.endpoint == 'auth.login' %}active{% endif %}">Login</a></li>
+                    <li><a href="{{ url_for('auth.register') }}" class="{% if request.endpoint == 'auth.register' %}active{% endif %}">Register</a></li>
+                {% endif %}
             </ul>
         </nav>
     </header>

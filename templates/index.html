@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="landing-section">
+    <div class="landing-content">
+        <!-- Large Cover Image -->
+        <img src="{{ url_for('static', filename='images/cover.png') }}" alt="Cover Image" class="cover-image">
+
+        <!-- Project Name -->
+        <h1 class="project-name">Things to Finish</h1>
+
+        <!-- One-line Phrase/Description -->
+        <p class="project-description">Streamline your tasks and boost productivity effortlessly.</p>
+
+        <!-- Button to Navigate to Project -->
+        <a href="{{ url_for('main.pending_tasks') }}" class="cta-button">Start Using the App</a>
+    </div>
+</section>
+
+<section class="features-section">
+    <h2>Key Features</h2>
+    <div class="features-container">
+
+        <!-- Feature 1: Task Creation -->
+        <div class="feature">
+            <h3>Task Creation</h3>
+            <p>Easily create new tasks by entering a title and description to help organize your daily activities.</p>
+        </div>
+
+        <!-- Feature 2: Task Completion Tracking -->
+        <div class="feature">
+            <h3>Task Completion Tracking</h3>
+            <p>Mark tasks as completed once you finish them, and keep track of your progress at a glance.</p>
+        </div>
+
+        <!-- Feature 3: Task Management -->
+        <div class="feature">
+            <h3>Task Management</h3>
+            <p>Edit or delete tasks to keep your task list up-to-date and ensure you're always on top of your priorities.</p>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section">
+    <h2>About the Project</h2>
+    <div class="about-content">
+        <p>
+            This project was inspired by the need to stay organized and productive in an ever-busy world. The idea came from a personal struggle with task management, where using existing tools felt too complex or overwhelming for simple day-to-day needs. <br><br>
+            The goal was to create a streamlined, no-nonsense task management app that would allow anyone to focus on what matters most—getting things done. This project has been developed over several weeks and is part of the ALXSE Portfolio Project. You can follow our development process and learn more about ALX by visiting their <a href="https://www.alxafrica.com/" target="_blank">website</a>.
+        </p>
+        
+        <h3>Team Members</h3>
+        <ul class="team-members">
+            <li>
+                <strong>Mahmoud Feshar</strong> <br>
+                <a href="https://www.linkedin.com/in/mahmoudfeshar/" target="_blank">LinkedIn</a> | 
+                <a href="https://github.com/mahfeshar" target="_blank">GitHub</a> | 
+                <a href="https://twitter.com/mahfeshar" target="_blank">Twitter</a>
+            </li>
+        </ul>
+        
+        <h3>Project Repository</h3>
+        <p>
+            You can check out the source code and contribute to the project on our <a href="https://github.com/mahfeshar/Things_to_finish" target="_blank">GitHub repository</a>.
+        </p>
+    </div>
+</section>
+{% endblock %}

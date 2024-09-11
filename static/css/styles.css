@@ -81,6 +81,176 @@ footer p {
     font-size: 14px;
 }
 
+
+/* Landing Section */
+.landing-section {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+.landing-content {
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.cover-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Project Name */
+.project-name {
+    font-size: 3.5em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* One-line Description */
+.project-description {
+    font-size: 1.5em;
+    color: #34495e;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Features Section */
+.features-section {
+    padding: 70px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.features-section h2 {
+    font-size: 3em;
+    margin-bottom: 50px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Features Container */
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.feature {
+    flex: 1 1 calc(33.333% - 20px); /* 3 columns with gap */
+    max-width: 300px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px); /* Lift on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+.feature h3 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.feature p {
+    font-size: 1.1em;
+    color: #34495e;
+    line-height: 1.6;
+}
+
+/* About Section */
+.about-section {
+    padding: 70px 20px;
+    background-color: #ffffff;
+    text-align: left;
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    font-size: 1.2em;
+    color: #34495e;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.team-members {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.team-members li {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.team-members a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.team-members a:hover {
+    text-decoration: underline;
+}
+
+.about-content h3 {
+    font-size: 1.8em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
 /* Tasks Section */
 .tasks-section {
     background: #ecf0f1;
@@ -160,4 +330,69 @@ footer p {
 
 .task-form button:hover {
     background-color: #218838;
+}
+
+/* Auth Section (Register and Login) */
+.auth-section {
+    background: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 40px auto; /* Centers the form */
+}
+
+.auth-section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.auth-form button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%; /* Full width button */
+}
+
+.auth-form button:hover {
+    background-color: #218838;
+}
+
+.auth-form p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.auth-form a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-form a:hover {
+    text-decoration: underline;
 }
